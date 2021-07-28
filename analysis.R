@@ -100,5 +100,7 @@ whole_meat <- meat %>%
   summarise(freq = n(), sum = sum(purchase)) %>% 
   mutate(purchase.1 = sum/freq,
          freq.1 = ifelse(HH == '525가구', freq/525,
-                         ifelse(HH == '1040가구', )))
+                         ifelse(HH == '1040가구', freq/1040, freq/1250 )),
+         sum.1 = ifelse(HH == '525가구', sum/525,
+                         ifelse(HH == '1040가구', sum/1040, sum/1250)))
 
