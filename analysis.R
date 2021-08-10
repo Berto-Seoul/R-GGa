@@ -6,7 +6,7 @@ library(ggplot2)
 # ========== 기본 데이터 불러오기
 load("p.fre.meat.Rdata")
 meat <- p.fre.meat
-
+write.csv(meat, file = "meat.csv")
 
 # write.csv(b, file = "b.csv")
 
